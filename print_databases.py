@@ -27,7 +27,6 @@ if __name__ == '__main__':
         table = Table(table_name, metadata, autoload=True)
 
         columns = [str(c).split('.')[-1] for c in table.columns]
-        import ipdb; ipdb.set_trace()
 
         table_to_print = session.query(table).all()
 
