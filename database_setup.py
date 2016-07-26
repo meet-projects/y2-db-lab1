@@ -11,13 +11,5 @@ class Person(Base):
     __tablename__ = 'person'
     id = Column(Integer, primary_key=True)
     name = Column(String)
-    hometown_id = Column(Integer, ForeignKey('city.id'))
-    hometown = relationship('City')
+    birthday = Column(Date)
     gender = Column(String)
-
-class City(Base):
-    __tablename__ = 'city'
-    id = Column(Integer, primary_key=True)
-    name = Column(String)
-    size = Column(String)
-
